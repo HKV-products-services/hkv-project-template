@@ -1,0 +1,36 @@
+{
+  "center" : {
+    "lat": 14.5,
+    "lon": -5.5
+  },
+  "zoom" : 5,
+  "controls" : {
+    "attribution": {
+      "show": true,
+      "position": "bottomright"
+    },
+    "zoom": {
+      "show": true,
+      "position": "topleft",
+      "options": {
+        "zoomInTitle": "Zoom in",
+        "zoomOutTitle": "Zoom out"
+      }
+    },
+    "layers": {
+      "show": true,
+      "position": "bottomleft",
+      "options": {
+        "collapsed": true
+      }
+    },
+    "scale": {
+      "show": false,
+      "position": "bottomleft",
+      "options": {
+        "imperial": false,
+        "metric": true
+      }
+    }
+  }
+}

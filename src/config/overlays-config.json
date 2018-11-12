@@ -1,0 +1,44 @@
+{
+  "overlays": [
+    {
+      "type": "geojson",
+      "label": "Oti Stations",
+      "url": "https://dmws.hkvservices.nl/dataportal/data.asmx/read?database=EWSECOWAS&key=oti_stations",
+      "key": "oti_stations",
+      "zIndex": 5,
+      "style": {
+        "type": "circle",
+        "radius": 7,
+        "fillColor": "#2196f3",
+        "color": "#2196f3",
+        "weight": 1,
+        "fillOpacity": 0.4
+      },
+      "tooltip": {
+        "fields": [
+          {
+            "title": "Name",
+            "field": "station_name"
+          }
+        ]
+      },
+      "addtocontrol": true,
+      "active": true,
+      "opacity": 0,
+      "zoomto": false
+    },
+    {
+      "key": "rivers",
+      "type": "wms",
+      "label": "Rivers",
+      "url": "https://dmgeo.hkvservices.nl/geoserver/wms",
+      "layer": "ecowas_world_rivers_WGS84_worldmap_harvard",
+      "workspace": "ECOWAS",
+      "style": "ECOWAS:rivers_ecowas",
+      "addtocontrol": true,
+      "active": true,
+      "opacity": 0.8,
+      "zoomto": false
+    }
+  ]
+}

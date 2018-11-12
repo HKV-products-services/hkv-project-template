@@ -1,0 +1,1 @@
+export default () => <div>Welcome to a new HKV project!</div>
