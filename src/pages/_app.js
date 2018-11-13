@@ -5,12 +5,17 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import { Provider } from 'react-redux'
 import withRedux from 'next-redux-wrapper'
 
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
-import { createMuiTheme } from '@material-ui/core/styles'
+import AppBar from '@material-ui/core/AppBar'
 import { blue } from '@material-ui/core/colors'
+import { createMuiTheme } from '@material-ui/core/styles'
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
 import NoSsr from '@material-ui/core/NoSsr'
+import Toolbar from '@material-ui/core/Toolbar'
+import Typography from '@material-ui/core/Typography'
 
 import { makeStore } from '../state/store'
+
+
 
 const theme = createMuiTheme({
   fontFamily: 'Roboto, sans-serif',
@@ -44,6 +49,13 @@ class Base extends App {
           <NoSsr>
             <CssBaseline>
               <MuiThemeProvider theme={ theme } sheetsManager={ new Map() } >
+                <AppBar position="relative" color="primary">
+                  <Toolbar>
+                    <Typography variant="h5" color="inherit">
+                      HKV Services
+                    </Typography>
+                  </Toolbar>
+                </AppBar>
                 <Component {...pageProps} />
               </MuiThemeProvider>
             </CssBaseline>

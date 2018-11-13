@@ -9,9 +9,8 @@ export default class AppDocument extends Document {
           <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico"/>
         </Head>
         <body className="custom_class">
-            <header>HKV Header</header>
-            <Main />
-            <NextScript />
+          <Main />
+          <NextScript />
         </body>
       </html>
     )
