@@ -15,7 +15,9 @@ export function addGeojson(map, layer) {
   })
 
   map.addLayerObject(layer.key, mapLayer)
-  mapLayer.addTo(map)
+  if (layer.active) {
+    mapLayer.addTo(map)
+  }
 }
 
 export function addWms(map, layer) {
@@ -28,7 +30,10 @@ export function addWms(map, layer) {
   })
 
   map.addLayerObject(layer.key, mapLayer)
-  mapLayer.addTo(map)
+
+  if (layer.active) {
+    mapLayer.addTo(map)
+  }
 }
 
 export default function(map, layer) {

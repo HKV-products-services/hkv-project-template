@@ -1,3 +1,4 @@
+import * as actions from '../actions'
 import * as geojson from './geo-json'
 import * as wms from './wms'
 
@@ -40,6 +41,28 @@ export function removeOverlayHandler(map, layerKey, { event, callback }) {
 
     if(layer) {
       layer.off(event, callback)
+    }
+  }
+}
+
+export function showLayer(map, layerKey) {
+  return function(dispatch) {
+    const layer = map.getLayerObject(layerKey)
+
+    if(layer) {
+      map.addLayer(layer)
+      dispatch({ type: actions.SHOW_LAYER, layerKey })
+    }
+  }
+}
+
+export function hideLayer(map, layerKey) {
+  return function(dispatch) {
+    const layer = map.getLayerObject(layerKey)
+
+    if(layer) {
+      map.removeLayer(layer)
+      dispatch({ type: actions.HIDE_LAYER, layerKey })
     }
   }
 }

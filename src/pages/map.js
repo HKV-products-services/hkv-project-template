@@ -29,7 +29,6 @@ class Page extends React.Component {
       })
   }
 
-
   render() {
     const { mapConfig } = this.props
     return (

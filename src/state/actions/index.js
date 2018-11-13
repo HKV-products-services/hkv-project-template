@@ -16,3 +16,6 @@ export const REMOVE_WMS_LAYERS = 'REMOVE_WMS_LAYERS'
 
 // VEGA actions
 export const SET_VEGA_SPECIFICATION = 'SET_VEGA_SPECIFICATION'
+
+export const HIDE_LAYER = 'HIDE_LAYER'
+export const SHOW_LAYER = 'SHOW_LAYER'
