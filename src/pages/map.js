@@ -1,5 +1,5 @@
-import dynamic from 'next/dynamic'
 import React from 'react'
+import dynamic from 'next/dynamic'
 import { connect } from 'react-redux'
 
 import asyncActions from '../state/async-actions'
