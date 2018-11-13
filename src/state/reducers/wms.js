@@ -2,8 +2,7 @@ import { combineReducers } from 'redux'
 
 import * as actions from '../actions'
 
-const { ADD_WMS_LAYER, ADD_WMS_LAYERS } = actions
-const REMOVE_WMS_LAYER = 'REMOVE_WMS_LAYER'
+const { ADD_WMS_LAYER, ADD_WMS_LAYERS, REMOVE_WMS_LAYER } = actions
 
 function layers(state=[], action) {
   switch(action.type) {
